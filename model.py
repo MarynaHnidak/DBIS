@@ -46,8 +46,6 @@ class orders(Base):
 
         ids = session.query(films).filter(dishes.dish_name == dish_name)
         id_dish = [row.dish_id for row in ids][0]
-        idd = session.query(cinema).filter(cinema.cinema_name == cinema_name)
-        ticket_price = [row.price for row in idt][0]
         idu = session.query(app_user).filter(app_user.user_phone == phone)
         id_user = [row.user_id for row in idu][0]
         new_order = orders(order_id=new_id,
